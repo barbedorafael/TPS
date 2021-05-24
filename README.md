@@ -1,5 +1,4 @@
-# TPS
-Topographic Position based Stream definition
+# Topographic Position based Stream definition (TPS)
 
 ## Example usage
 ### Inputs required
