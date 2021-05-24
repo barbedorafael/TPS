@@ -1,5 +1,5 @@
 # Topographic Position based Stream definition (TPS)
-
+Python code for stream definition in a Digital Elevation Model (DEM) conditioned by Topographic Position Index (TPI).
 ## Example usage
 ### Inputs required
 - Digital Elevation Model (DEM)
