@@ -47,7 +47,7 @@ amin = 1.6
 amax = 320
 ```
 
-5. Compute stream network with TPS method
+4. Compute stream network with TPS method
 ```python
 str_mask = get_str_mask(fdr, fac, tpi, amax, amin, v)
 
@@ -55,7 +55,7 @@ str_mask = get_str_mask(fdr, fac, tpi, amax, amin, v)
 array2tif('GIS/'+region+'_str_mask.tif', srcfn, str_mask)
 ```
 
-4. \(Optional) Convert stream mask to line vector
+5. \(Optional) Convert stream mask to line vector
 ```python
 str_line = array2gdf(rasref, mask_tpi, fdr, fac)
 
