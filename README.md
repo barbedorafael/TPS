@@ -2,7 +2,7 @@
 Python code for stream definition in a Digital Elevation Model (DEM) conditioned by Topographic Position Index (TPI).
 
 Reference:
-Rafael Barbedo, Vinícius Siqueira & Walter Collischonn (2022). [Topographic Position-based Stream definition (TPS): A simple method to address spatial variability of drainage density in stream networks. Hydrological Sciences Journal.](10.1080/02626667.2022.2047190)
+Rafael Barbedo, Vinícius Siqueira & Walter Collischonn (2022). [Topographic Position-based Stream definition (TPS): A simple method to address spatial variability of drainage density in stream networks. Hydrological Sciences Journal.](https://www.tandfonline.com/doi/full/10.1080/02626667.2022.2047190)
 
 ### Inputs required
 - Digital Elevation Model (DEM)
