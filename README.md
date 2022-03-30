@@ -1,6 +1,9 @@
 # Topographic Position based Stream definition (TPS)
 Python code for stream definition in a Digital Elevation Model (DEM) conditioned by Topographic Position Index (TPI).
 
+Reference:
+Rafael Barbedo, Vinícius Siqueira & Walter Collischonn (2022). [Topographic Position-based Stream definition (TPS): A simple method to address spatial variability of drainage density in stream networks. Hydrological Sciences Journal.](10.1080/02626667.2022.2047190)
+
 ### Inputs required
 - Digital Elevation Model (DEM)
 - Flow direction (FDR) - must be in [HydroSHEDS](https://developers.google.com/earth-engine/datasets/catalog/WWF_HydroSHEDS_03DIR#:~:text=HydroSHEDS%20is%20based%20on%20elevation,vary%20from%201%20to%20128.) format (1=E, 2=SE, 4=S, 8=SW, 16=W, 32=NW, 64=N, 128=NE)
