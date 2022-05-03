@@ -20,7 +20,7 @@ You can also download them via Google Earth Engine. Just [click here](https://co
 
 Stream is defined where `FAC > Amin AND TPI < V` OR `FAC > Amax`. Then, gaps are filled using FDR.
 
-<img src="https://user-images.githubusercontent.com/83959435/119422091-98f2bc00-bcd6-11eb-8bc3-9e919b3767f3.png" width="100">
+<img src="https://user-images.githubusercontent.com/83959435/119422091-98f2bc00-bcd6-11eb-8bc3-9e919b3767f3.png" width="400">
 
 
 ## Example usage
