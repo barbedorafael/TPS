@@ -7,7 +7,6 @@
 # =============================================================================
 
 from osgeo import gdal, osr
-import rasterio
 import numpy as np
 
 def flow_ds(rowL, colL, fdr):
@@ -92,7 +91,8 @@ def array2tif(outname, raster, mx):
 
 from shapely import geometry as geo
 import shapely.vectorized
-import geopandas as gpd
+import fiona
+from fiona.crs import from_epsg
 
 def pixelOffset2coord(raster,xOffset,yOffset):
     geotransform = raster.GetGeoTransform()
@@ -157,7 +157,7 @@ def arrayClip(rasref, array, poly):
     
     return array
     
-def array2gdf(rasterFdr, mask, fdr, fac, pixelValue=1):
+def array2shp(rasterFdr, mask, fdr, fac, lyr_fn = "strLayer.shp", pixelValue=1):
     
     # array2dict
     count = 0
@@ -218,5 +218,23 @@ def array2gdf(rasterFdr, mask, fdr, fac, pixelValue=1):
             if point in stretchIn:
                 path = 0
     
-    strLayer = gpd.GeoDataFrame(geometry=stretches)
-    return strLayer
+    # Save to file
+    schema = {
+        'geometry': 'LineString',
+        'properties': {'id': 'int'},
+    }
+    
+    with fiona.open(lyr_fn, "w", driver="ESRI Shapefile",
+                    crs=from_epsg(4326), schema=schema) as layer:
+        for i, stretch in enumerate(stretches):
+            layer.write({
+                'geometry': {
+                    'type': 'LineString',
+                    'coordinates': stretch
+                },
+                'properties': {'id': i},
+            })
+    
+    return
+
+
