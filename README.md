@@ -6,6 +6,7 @@ Rafael Barbedo, Vinícius Siqueira & Walter Collischonn (2022). [Topographic Pos
 
 ### Requirements
 - Python > 3.5
+- Numpy
 - GDAL > 3
 - Shapely
 - Fiona
